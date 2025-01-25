@@ -50,7 +50,7 @@ class Comment(Base):
 class Follower(Base):
     __tablename__ = 'follower'
     id = Column(Integer, primary_key=True)
-    follower_id = Column(String(15), ForeignKey('user.id'))
+    follow_id = Column(String(15), ForeignKey('user.id'))
     user_id = Column(String(15), ForeignKey('user.id'))
 
 ## Draw from SQLAlchemy base
